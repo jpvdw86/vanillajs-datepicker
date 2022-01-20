@@ -252,7 +252,7 @@ export default class Picker {
       bottom: inputBottom,
       width: inputWidth,
       height: inputHeight
-    } = inputField.getBoundingClientRect();
+    } = config.container ? config.container.getBoundingClientRect() : inputField.getBoundingClientRect();
     let {x: orientX, y: orientY} = config.orientation;
     let left = inputLeft;
     let top = inputTop;
